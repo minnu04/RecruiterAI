@@ -6,7 +6,6 @@ const FAQItem = ({ question, answer }) => {
             <summary className="flex items-center justify-between cursor-pointer p-5 bg-white border border-gray-200 rounded-xl hover:border-gray-300 transition-all list-none">
                 <div className="flex items-center gap-4">
                     <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center text-gray-400 group-open:bg-blue-600 group-open:border-blue-600 group-open:text-white transition-colors">
-                        {/* Plus/Minus Icon */}
                         <span className="group-open:hidden">+</span>
                         <span className="hidden group-open:block">-</span>
                     </div>

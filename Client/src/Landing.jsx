@@ -8,7 +8,6 @@ import FAQItem from './components/FAQItem';
 import FinalCTA from './components/FinalCTA';
 
 const Landing = () => {
-    // Data for Detailed Flowcharts
     const flowCardsData = [
         {
             title: "1. Automated Candidate Screening & Scheduling",
@@ -57,21 +56,16 @@ const Landing = () => {
         }
     ];
 
-    // Data for Metrics
     const metricsData = [
         { value: "10x", label: "Faster Screening", colorClass: "bg-blue-600" },
         { value: "70%", label: "Faster Time-to-Hire", colorClass: "bg-blue-400" },
-        { value: "60%", label: "Less Manual Work", colorClass: "bg-[#7C3AED]" }, // Deep Purple
-        { value: "2x", label: "Higher Candidate Response Rate", colorClass: "bg-[#2563EB]" } // Royal Blue
+        { value: "60%", label: "Less Manual Work", colorClass: "bg-[#7C3AED]" }, 
+        { value: "2x", label: "Higher Candidate Response Rate", colorClass: "bg-[#2563EB]" } 
     ];
-
-    // Data for Logos
     const logos = [
         "LinkedIn", "naukri.com", "Indeed", "AngelList", "instahyre",
         "Wellfound", "glassdoor"
     ];
-
-    // Data for Testimonials
     const testimonials = [
         {
             quote: "We went from 6 weeks to hire a developer to just 10 days. RecruiterAI handled everything from screening to scheduling. Game changer for our 5-person startup.",
@@ -95,8 +89,6 @@ const Landing = () => {
             image: ""
         }
     ];
-
-    // Data for FAQs
     const faqs = [
         {
             question: "How does AI screening work?",
@@ -122,10 +114,8 @@ const Landing = () => {
 
     return (
         <div className="font-sans text-gray-900 bg-[#EFF6FF]">
-            {/* 1. Hero Section */}
             <Hero />
 
-            {/* 2. Flowcharts Section */}
             <section className="py-20 px-4 max-w-7xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold text-center text-[#1E3A8A] mb-4">
                     AI Recruiting Software That Works Like Your Own HR Team
@@ -133,15 +123,12 @@ const Landing = () => {
                 <p className="text-lg text-center text-gray-600 mb-16 max-w-2xl mx-auto">
                     Build custom hiring workflows in minutes. No coding required.
                 </p>
-                {/* Changed grid to support 3 wide on large screens, stack on mobile */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
                     {flowCardsData.map((card, index) => (
                         <FlowCard key={index} {...card} />
                     ))}
                 </div>
             </section>
-
-            {/* 3. The RecruiterAI Advantage */}
             <section className="py-20 bg-[#E0E7FF]/50">
                 <div className="max-w-6xl mx-auto px-4">
                     <h2 className="text-xl md:text-2xl font-bold text-center text-[#1E3A8A] mb-12">
@@ -154,8 +141,6 @@ const Landing = () => {
                     </div>
                 </div>
             </section>
-
-            {/* 4. Post Once, Reach Everywhere (Updated Title/Subheadline) */}
             <section className="py-20 bg-white">
                 <div className="text-center mb-10 px-4">
                     <h2 className="text-xl md:text-3xl font-bold text-[#1E3A8A] mb-4">
@@ -167,8 +152,6 @@ const Landing = () => {
                 </div>
                 <LogoStrip logos={logos} />
             </section>
-
-            {/* 5. Testimonials (Enabled and Updated) */}
             <section className="py-20 bg-light-secondary">
                 <div className="max-w-7xl mx-auto px-4">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[#1E3A8A]">
@@ -181,8 +164,6 @@ const Landing = () => {
                     </div>
                 </div>
             </section>
-
-            {/* 6. FAQ Section */}
             <section className="py-20 max-w-4xl mx-auto px-4">
                 <h2 className="text-xl md:text-2xl font-bold text-center text-[#1E3A8A] mb-12">
                     Frequently Asked Questions
@@ -193,8 +174,6 @@ const Landing = () => {
                     ))}
                 </div>
             </section>
-
-            {/* 7. Final CTA */}
             <FinalCTA />
         </div>
     );
